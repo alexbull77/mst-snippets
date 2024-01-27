@@ -1,20 +1,26 @@
 {
-  "name": "mst-snippets",
-  "displayName": "mst-snippets",
-  "description": "Snippets for mobx state tree",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.85.0"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "typescript",
-        "path": "./snippets/snippets.code-snippets"
-      }
-    ]
-  }
+    "name": "mst-snippets",
+    "displayName": "MST Snippets",
+    "description": "Snippets for mobx state tree",
+    "version": "0.0.2",
+    "publisher": "alex-bularga",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexbull77/mst-snippets"
+    },
+    "icon": "assets/logo.png"
 }
