@@ -2,7 +2,7 @@
     "name": "mst-snippets",
     "displayName": "MST Snippets",
     "description": "Snippets for mobx state tree",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "alex-bularga",
     "engines": {
         "vscode": "^1.85.0"
