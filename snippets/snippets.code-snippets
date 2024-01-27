@@ -1,0 +1,58 @@
+{
+  "model": {
+    "prefix": "m",
+    "body": [
+      "import { types } from 'mobx-state-tree'\n",
+      "const ${1:ModelName} = types",
+      "\t.model(\"${1:ModelName}\", {\n\t\t$0",
+      "\t})"
+    ],
+    "description": "Create a basic mst model with given name"
+  },
+
+  "model and views": {
+    "prefix": "mv",
+    "body": [
+      "import { types } from 'mobx-state-tree'\n",
+      "const ${1:ModelName} = types",
+      "\t.model(\"${1:ModelName}\", {\n\t\t$2",
+      "\t})"
+      "\t.views((self) => ({",
+      "\t\t$0",
+      "\t}))"
+    ],
+    "description": "Create a basic mst model with given name"
+  },
+
+  "model, views and actions": {
+    "prefix": "mva",
+    "body": [
+      "import { types } from 'mobx-state-tree'\n",
+      "const ${1:ModelName} = types",
+      "\t.model(\"${1:ModelName}\", {\n\t\t$2",
+      "\t})"
+      "\t.views((self) => ({",
+      "\t\t$3",
+      "\t}))"
+      "\t.actions((self) => ({",
+      "\t\t$0",
+      "\t}))"
+    ],
+    "description": "Create a basic mst model with given name"
+  },
+
+  "instance type": {
+    "prefix": "in",
+    "body": "export interface I${1:ModelName} extends Instance<typeof ${1:ModelName}> {}"
+  },
+
+  "snapshot in type": {
+    "prefix": "snin",
+    "body": "export interface I${1:ModelName}SnIn extends SnapshotIn<typeof ${1:ModelName}> {}"
+  },
+
+  "snapshot out type": {
+    "prefix": "snout",
+    "body": "export interface I${1:ModelName} extends SnapshotOut<typeof ${1:ModelName}> {}"
+  }
+}
