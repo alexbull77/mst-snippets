@@ -1,35 +1,35 @@
 {
-  "model": {
+  "Model with import": {
     "prefix": "m",
     "body": [
       "import { types } from 'mobx-state-tree'\n",
-      "const ${1:ModelName} = types",
-      "\t.model(\"${1:ModelName}\", {\n\t\t$0",
+      "const ${1:$TM_FILENAME_BASE} = types",
+      "\t.model(\"${1:$TM_FILENAME_BASE}\", {\n\t\t$0",
       "\t})"
     ],
-    "description": "Create a basic mst model with given name"
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
 
-  "model and views": {
+  "Model and views with import": {
     "prefix": "mv",
     "body": [
       "import { types } from 'mobx-state-tree'\n",
-      "const ${1:ModelName} = types",
-      "\t.model(\"${1:ModelName}\", {\n\t\t$2",
+      "const ${1:$TM_FILENAME_BASE} = types",
+      "\t.model(\"${1:$TM_FILENAME_BASE}\", {\n\t\t$2",
       "\t})"
       "\t.views((self) => ({",
       "\t\t$0",
       "\t}))"
     ],
-    "description": "Create a basic mst model with given name"
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
 
-  "model, views and actions": {
+  "Model, views and actions with import": {
     "prefix": "mva",
     "body": [
       "import { types } from 'mobx-state-tree'\n",
-      "const ${1:ModelName} = types",
-      "\t.model(\"${1:ModelName}\", {\n\t\t$2",
+      "const ${1:$TM_FILENAME_BASE} = types",
+      "\t.model(\"${1:$TM_FILENAME_BASE}\", {\n\t\t$2",
       "\t})"
       "\t.views((self) => ({",
       "\t\t$3",
@@ -38,21 +38,67 @@
       "\t\t$0",
       "\t}))"
     ],
-    "description": "Create a basic mst model with given name"
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
 
-  "instance type": {
+  "Instance interface": {
     "prefix": "in",
-    "body": "export interface I${1:ModelName} extends Instance<typeof ${1:ModelName}> {}"
+    "body": "export interface I${1:ModelName} extends Instance<typeof ${1:ModelName}> {}",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
 
-  "snapshot in type": {
+  "Snapshot In interface": {
     "prefix": "snin",
-    "body": "export interface I${1:ModelName}SnIn extends SnapshotIn<typeof ${1:ModelName}> {}"
+    "body": "export interface I${1:ModelName}SnIn extends SnapshotIn<typeof ${1:ModelName}> {}",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
 
-  "snapshot out type": {
+  "Snapshot Out interface": {
     "prefix": "snout",
-    "body": "export interface I${1:ModelName} extends SnapshotOut<typeof ${1:ModelName}> {}"
+    "body": "export interface I${1:ModelName} extends SnapshotOut<typeof ${1:ModelName}> {}",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+
+  "Model block": {
+    "prefix": ".m",
+    "body": [
+        ".model(\"${1:$TM_FILENAME_BASE}\", {\n\t\t$0",
+        "\t})"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+
+  "Views block": {
+    "prefix": ".v",
+    "body": [
+        ".views((self) => ({",
+        "\t\t$3",
+        "\t}))"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+
+  "Actions block": {
+    "prefix": ".a",
+    "body": [
+        ".actions((self) => ({",
+        "\t\t$3",
+        "\t}))"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+
+  "Observer React Component": {
+    "prefix": "orc",
+    "body": [
+        "import { observer } from 'mobx-react-lite'",
+        "",
+        "export const $TM_FILENAME_BASE = observer(() => {",
+        "\treturn (",
+        "\t\t$0",
+        "\t)",
+        "})"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   }
 }
