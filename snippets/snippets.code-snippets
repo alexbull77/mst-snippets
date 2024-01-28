@@ -99,6 +99,6 @@
         "\t)",
         "})"
     ],
-    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    "scope": "typescriptreact,javascriptreact"
   }
 }
